@@ -1,0 +1,487 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>usage · GitBook 简明教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Mealoore">
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="install.html" />
+    
+
+    <script src="gitbook/gitbook-plugin-graph/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-graph/function-plot.js"></script>    
+
+    
+    <link rel="stylesheet" href="gitbook/gitbook-plugin-chart/c3/c3.min.css">
+    <script src="gitbook/gitbook-plugin-chart/c3/d3.min.js"></script>
+    <script src="gitbook/gitbook-plugin-chart/c3/c3.min.js"></script>
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/Mealoore" target="_blank" class="custom-link">Mealoore</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="usage.html">
+            
+                <a href="usage.html">
+            
+                    
+                    usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >usage</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#usage"><b></b>usage</a></li><ul><li><span class="title-icon "></span><a href="#&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;"><b></b>&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;(&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;)</a></li><ul><li><span class="title-icon "></span><a href="#1-&#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;"><b></b>1 &#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;</a></li><li><span class="title-icon "></span><a href="#2-&#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;"><b></b>2 &#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;(&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;)</a></li></ul><li><span class="title-icon "></span><a href="#&#x63A7;&#x5236;&#x547D;&#x4EE4;"><b></b>&#x63A7;&#x5236;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x95EE;&#x9898;"><b></b>&#x95EE;&#x9898;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#usage" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="usage"><a name="usage" class="anchor-navigation-ex-anchor" href="#usage"><i class="fa fa-link" aria-hidden="true"></i></a>usage</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=3 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;">&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;(&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;)</a><ul>
+<li><a href="#1-&#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;">1 &#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;</a></li>
+<li><a href="#2-&#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;">2 &#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;(&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;)</a></li>
+</ul>
+</li>
+<li><a href="#&#x63A7;&#x5236;&#x547D;&#x4EE4;">&#x63A7;&#x5236;&#x547D;&#x4EE4;</a></li>
+<li><a href="#&#x95EE;&#x9898;">&#x95EE;&#x9898;</a></li>
+<li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li>
+</ul>
+<!-- /code_chunk_output -->
+<!-- [Toc] -->
+<h2 id="&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;"><a name="&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;" class="anchor-navigation-ex-anchor" href="#&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7535;&#x5B50;&#x4E66;&#x521B;&#x5EFA;(&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#x5982;&#x4E0B;)</h2>
+<h3 id="1-&#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;"><a name="1-&#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;" class="anchor-navigation-ex-anchor" href="#1-&#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;"><i class="fa fa-link" aria-hidden="true"></i></a>1 &#x521B;&#x5EFA;&#x7535;&#x5B50;&#x4E66;</h3>
+<pre><code class="lang-sh">mkdir TestBook  
+<span class="hljs-built_in">cd</span> TestBook  
+gitbook init
+</code></pre>
+<p>&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#xFF0C;&#x82E5;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x4E5F;&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#xFF1A;</p>
+<ul>
+<li>README.md&#xFF1A;&#x4E66;&#x7C4D;&#x7684;&#x4ECB;&#x7ECD;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF1B;</li>
+<li>SUMMARY.md&#xFF1A;&#x4E66;&#x7C4D;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5728;&#x8FD9;&#x91CC;&#x914D;&#x7F6E;</li>
+</ul>
+<h3 id="2-&#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;"><a name="2-&#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#2-&#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>2 &#x7F16;&#x8F91;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;(&#x4F7F;&#x7528;&#x5230;md&#x8BED;&#x6CD5;)</h3>
+<p>gitbook&#x57FA;&#x672C;&#x7ED3;&#x6784;</p>
+<pre><code class="lang-sh">&#x251C;&#x2500;&#x2500; book.json
+&#x251C;&#x2500;&#x2500; README.md
+&#x251C;&#x2500;&#x2500; SUMMARY.md
+&#x251C;&#x2500;&#x2500; chapter1/
+|    &#x251C;&#x2500;&#x2500; README.md
+|    &#x251C;&#x2500;&#x2500; something.md
+&#x251C;&#x2500;&#x2500; chapter2/
+|    &#x251C;&#x2500;&#x2500; README.md
+</code></pre>
+<ol>
+<li><p>README.md&#x6B64;&#x6587;&#x4EF6;&#x662F;&#x7B80;&#x5355;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x4ECB;&#x7ECD;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x60A8;&#x6240;&#x5236;&#x4F5C;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x505A;&#x4E00;&#x4E0B;&#x7B80;&#x5355;&#x7684;&#x63CF;&#x8FF0;&#xFF1A;  </p>
+<pre><code class="lang-markdown"><span class="hljs-section"># &#x7B80;&#x4ECB;  </span>
+&#x8FD9;&#x662F;&#x6211;&#x7684;&#x7B2C;&#x4E00;&#x672C;&#x4F7F;&#x7528; GitBook &#x5236;&#x4F5C;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x3002;
+</code></pre>
+</li>
+<li><p>SUMMARY.md&#x6B64;&#x4E3A;&#x7535;&#x5B50;&#x4E66;&#x7684;&#x5BFC;&#x822A;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x5F53;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x7AE0;&#x8282;&#x6587;&#x4EF6;&#x5C31;&#x9700;&#x8981;&#x5411;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-markdown"><span class="hljs-section"># Summary</span>
+<span class="hljs-bullet">* </span>[<span class="hljs-string">Introduction</span>](<span class="hljs-link">README.md</span>)  
+<span class="hljs-bullet">* </span>[<span class="hljs-string">uitest &#x662F;&#x4EC0;&#x4E48;</span>](<span class="hljs-link">users/index.md</span>)  
+<span class="hljs-code">    * [&#x5982;&#x4F55;&#x4F7F;&#x7528; uitest](users/use.md)  </span>
+<span class="hljs-code">    * [&#x5982;&#x4F55;&#x7F16;&#x5199;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;](users/case.md)  </span>
+<span class="hljs-code">    * [browserjs API &#x6587;&#x6863;](users/api.md)  </span>
+<span class="hljs-bullet">* </span>[<span class="hljs-string">uitest &#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;</span>](<span class="hljs-link">devs/index.md</span>)  
+<span class="hljs-code">    * [browserjs &#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;](devs/browserjs.md)  </span>
+<span class="hljs-code">    * [utci &#x6587;&#x6863;](devs/utci.md)  </span>
+<span class="hljs-code">    * [utserver &amp; utclient &#x6587;&#x6863;](devs/utserver.md)  </span>
+<span class="hljs-bullet">* </span>[<span class="hljs-string">&#x76F8;&#x5173;&#x6587;&#x7AE0;&#x6C89;&#x6DC0;</span>](<span class="hljs-link">artical.md</span>)  
+<span class="hljs-bullet">* </span>[<span class="hljs-string">&#x5173;&#x4E8E; gitbook</span>](<span class="hljs-link">gitbook.md</span>)
+</code></pre>
+</li>
+<li><p>Glossary.md&#x5BF9;&#x4E8E;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;&#x4E2D;&#x9700;&#x8981;&#x89E3;&#x91CA;&#x7684;&#x8BCD;&#x6C47;&#x53EF;&#x5728;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x3002;&#x8BCD;&#x6C47;&#x8868;&#x4F1A;&#x88AB;&#x653E;&#x5728;&#x7535;&#x5B50;&#x4E66;&#x672B;&#x5C3E;&#x3002;  </p>
+<pre><code class="lang-markdown"><span class="hljs-section"># &#x7535;&#x5B50;&#x4E66;  </span>
+&#x7535;&#x5B50;&#x4E66;&#x662F;&#x6307;&#x5C06;&#x6587;&#x5B57;&#x3001;&#x56FE;&#x7247;&#x3001;&#x58F0;&#x97F3;&#x3001;&#x5F71;&#x50CF;&#x7B49;&#x8BAF;&#x606F;&#x5185;&#x5BB9;&#x6570;&#x5B57;&#x5316;&#x7684;&#x51FA;&#x7248;&#x7269;
+&#x548C;&#x690D;&#x5165;&#x6216;&#x4E0B;&#x8F7D;&#x6570;&#x5B57;&#x5316;&#x6587;&#x5B57;&#x3001;&#x56FE;&#x7247;&#x3001;&#x58F0;&#x97F3;&#x3001;&#x5F71;&#x50CF;&#x7B49;&#x8BAF;&#x606F;&#x5185;&#x5BB9;&#x7684;&#x96C6;&#x5B58;&#x50A8;&#x548C;&#x663E;&#x793A;&#x7EC8;&#x7AEF;&#x4E8E;&#x4E00;&#x4F53;&#x7684;&#x624B;&#x6301;&#x9605;&#x8BFB;&#x5668;&#x3002;
+<span class="hljs-section"># Kindle  </span>
+Amazon Kindle &#x662F;&#x7531; Amazon &#x8BBE;&#x8BA1;&#x548C;&#x9500;&#x552E;&#x7684;&#x7535;&#x5B50;&#x4E66;&#x9605;&#x8BFB;&#x5668;&#xFF08;&#x4EE5;&#x53CA;&#x8F6F;&#x4EF6;&#x5E73;&#x53F0;&#xFF09;&#x3002;
+&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65E0;&#x7EBF;&#x7F51;&#x7EDC;&#x4F7F;&#x7528; Amazon Kindle &#x8D2D;&#x4E70;&#x3001;&#x4E0B;&#x8F7D;&#x548C;&#x9605;&#x8BFB;&#x7535;&#x5B50;&#x4E66;&#x3001;&#x62A5;&#x7EB8;&#x3001;&#x6742;&#x5FD7;&#x3001;&#x535A;&#x5BA2;&#x53CA;&#x5176;&#x4ED6;&#x7535;&#x5B50;&#x5A92;&#x4F53;&#x3002;
+</code></pre>
+</li>
+<li><p>book.json &#x662F;&#x7535;&#x5B50;&#x4E66;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x7535;&#x5B50;&#x4E66;&#x7684;&#x201C;&#x539F;&#x6570;&#x636E;&#x201D;&#xFF0C;&#x6BD4;&#x5982; title&#x3001;description&#x3001;isbn&#x3001;language&#x3001;direction&#x3001;styles &#xFF0C;&#x57FA;&#x672C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;TestBook&quot;</span>,  
+    <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;Jian Fangjian &lt;fangjian98@gmail.com&gt;&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;TestBook&quot;</span>,  
+    <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;zh-tw&quot;</span>,  
+}
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x8BF4;&#x660E;</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>&#x53D8;&#x91CF;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>root</td>
+<td>&#x5305;&#x542B;&#x6240;&#x6709;&#x56FE;&#x4E66;&#x6587;&#x4EF6;&#x7684;&#x6839;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x9664;&#x4E86; book.json</td>
+</tr>
+<tr>
+<td>structure</td>
+<td>&#x6307;&#x5B9A;&#x81EA;&#x8FF0;&#x6587;&#x4EF6;&#xFF0C;&#x6458;&#x8981;&#xFF0C;&#x8BCD;&#x6C47;&#x8868;&#x7B49;&#x7684;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td>title</td>
+<td>&#x60A8;&#x7684;&#x4E66;&#x540D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4ECE; README &#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x3002;&#x5728; GitBook.com &#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td>description</td>
+<td>&#x60A8;&#x7684;&#x4E66;&#x7C4D;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F;&#x4ECE; README &#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#x7684;&#x3002;&#x5728; GitBook.com &#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td>author</td>
+<td>&#x4F5C;&#x8005;&#x540D;&#x3002;&#x5728;GitBook.com&#x4E0A;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x9884;&#x586B;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td>isbn</td>
+<td>&#x56FD;&#x9645;&#x6807;&#x51C6;&#x4E66;&#x53F7; ISBN</td>
+</tr>
+<tr>
+<td>language</td>
+<td>&#x672C;&#x4E66;&#x7684;&#x8BED;&#x8A00;&#x7C7B;&#x578B;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <code>en</code>&#xFF0C;&#x53EF;&#x9009;&#xFF1A;en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw</td>
+</tr>
+<tr>
+<td>direction</td>
+<td>&#x6587;&#x672C;&#x9605;&#x8BFB;&#x987A;&#x5E8F;&#x3002;&#x53EF;&#x4EE5;&#x662F; rtl &#xFF08;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#xFF09;&#x6216; ltr &#xFF08;&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#xFF09;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x4F9D;&#x8D56;&#x4E8E; language &#x7684;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td>gitbook</td>
+<td>&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x7684;GitBook&#x7248;&#x672C;&#xFF0C;&#x5E76;&#x63A5;&#x53D7;&#x7C7B;&#x4F3C;&#x4E8E; <code>&gt;=3.0.0</code> &#x7684;&#x6761;&#x4EF6;&#x3002;</td>
+</tr>
+<tr>
+<td>links</td>
+<td>&#x5728;&#x5DE6;&#x4FA7;&#x5BFC;&#x822A;&#x680F;&#x6DFB;&#x52A0;&#x94FE;&#x63A5;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>plugins</td>
+<td>&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x63D2;&#x4EF6;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>pluginsConfig</td>
+<td>&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>styles</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x9875;&#x9762;&#x6837;&#x5F0F;&#xFF0C; &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x5404;generator&#x5BF9;&#x5E94;&#x7684;css&#x6587;&#x4EF6;<code>&quot;styles&quot;: { &quot;website&quot;: &quot;styles/website.css&quot;, }</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x63A7;&#x5236;&#x547D;&#x4EE4;"><a name="&#x63A7;&#x5236;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x63A7;&#x5236;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A7;&#x5236;&#x547D;&#x4EE4;</h2>
+<p>&#x5728; TestBook &#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;</p>
+<pre><code class="lang-sh">gitbook build [&#x4E66;&#x7C4D;&#x8DEF;&#x5F84;] [&#x8F93;&#x51FA;&#x8DEF;&#x5F84;]  <span class="hljs-comment"># &#x751F;&#x6210;html&#x9759;&#x6001;&#x7F51;&#x9875;&#x6587;&#x4EF6;&#xFF1A;_book&#xFF0C;&#x5176;&#x4E2D; index.html &#x4E3A;&#x5165;&#x53E3;&#x6587;&#x4EF6;</span>
+gitbook serve [--port &#x7AEF;&#x53E3;&#x53F7;] <span class="hljs-comment"># &#x5728;&#x7F51;&#x9875;&#x4E2D;&#x67E5;&#x770B;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x8F93;&#x5165; *http://localhost:4000* &#x5373;&#x53EF;&#x9884;&#x89C8;&#x7535;&#x5B50;&#x4E66;&#x5185;&#x5BB9;</span>
+gitbook pdf ./ ./mybook.pdf    <span class="hljs-comment"># &#x751F;&#x6210; pdf/epub/mobi &#x683C;&#x5F0F;&#x7684;&#x7535;&#x5B50;&#x4E66;</span>
+gitbook epub ./ ./mybook.epub  <span class="hljs-comment"># &#x751F;&#x6210;epub&#x683C;&#x5F0F;</span>
+gitbook mobi ./ ./mybook.mobi  <span class="hljs-comment"># &#x751F;&#x6210; mobi &#x683C;&#x5F0F;</span>
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code class="lang-sh">gitbook <span class="hljs-built_in">help</span>            <span class="hljs-comment"># &#x5217;&#x51FA;gitbook&#x6240;&#x6709;&#x7684;&#x547D;&#x4EE4;</span>
+gitbook --help          <span class="hljs-comment"># &#x8F93;&#x51FA;gitbook-cli&#x7684;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</span>
+gitbook ls              <span class="hljs-comment"># &#x5217;&#x51FA;&#x672C;&#x5730;&#x6240;&#x6709;&#x7684;gitbook&#x7248;&#x672C;</span>
+gitbook ls-remote       <span class="hljs-comment"># &#x5217;&#x51FA;&#x8FDC;&#x7A0B;&#x53EF;&#x7528;&#x7684;gitbook&#x7248;&#x672C;</span>
+gitbook fetch &#x6807;&#x7B7E;/&#x7248;&#x672C;&#x53F7; <span class="hljs-comment"># &#x5B89;&#x88C5;&#x5BF9;&#x5E94;&#x7684;gitbook&#x7248;&#x672C;</span>
+gitbook update           <span class="hljs-comment"># &#x66F4;&#x65B0;&#x5230;gitbook&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;</span>
+gitbook uninstall 2.0.1  <span class="hljs-comment"># &#x5378;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;gitbook&#x7248;&#x672C;</span>
+</code></pre>
+<h2 id="&#x95EE;&#x9898;"><a name="&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EE;&#x9898;</h2>
+<ol>
+<li><p><code>gitbook build</code>&#x62A5;&#x9519;&#xFF1A;</p>
+<pre><code class="lang-sh">TypeError: cb.apply is not a <span class="hljs-keyword">function</span>
+    at /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+</code></pre>
+<p><strong>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;</strong> 
+&#x6CE8;&#x91CA;<code>/usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js</code> `&#x6587;&#x4EF6;&#x4E2D;&#x4EE5;&#x4E0B;&#x4E09;&#x884C;</p>
+<pre><code class="lang-cpp"><span class="hljs-comment">//fs.stat = statFix(fs.stat)</span>
+<span class="hljs-comment">//fs.fstat = statFix(fs.fstat)</span>
+<span class="hljs-comment">//fs.lstat = statFix(fs.lstat)</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<ol>
+<li><a href="https://blog.csdn.net/swy_swy_swy/article/details/118542847?spm=1001.2101.3001.6661.1&amp;utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-118542847-blog-110948703.pc_relevant_3mothn_strategy_and_data_recovery&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-118542847-blog-110948703.pc_relevant_3mothn_strategy_and_data_recovery&amp;utm_relevant_index=1" target="_blank">gitbook&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x51FA;&#x73B0;TypeError: cb.apply is not a function</a></li>
+<li><a href="http://www.taodudu.cc/news/show-4899270.html" target="_blank">gitbook&#x7535;&#x5B50;&#x4E66;&#x5236;&#x4F5C;&#x6B65;&#x9AA4;&#xFF08;linux&#x73AF;&#x5883;&#x4E0B;&#xFF09;</a></li>
+<li><a href="http://www.javashuo.com/article/p-mqknmune-nv.html" target="_blank">Ubuntu &#x5B89;&#x88C5; Gitbook &#x6B65;&#x9AA4;&#x548C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BE6;&#x89E3; &#x4EE5;&#x53CA; &#x963F;&#x91CC;&#x4E91;&#x57FA;&#x4E8E; Gitbook &#x6211;&#x7684;&#x535A;&#x5BA2;&#x90E8;&#x7F72;</a></li>
+<li><a href="https://www.bbsmax.com/A/A2dm2xY7ze/" target="_blank">Gitbook &#x7B80;&#x4ECB; &#x4F7F;&#x7528;&#x603B;&#x7ED3; MD</a></li>
+<li><a href="https://blog.csdn.net/weixin_42396197/article/details/124218369" target="_blank">Ubuntu&#x5B89;&#x88C5;nodejs +Gitbook&#x5B89;&#x88C5; +nginx&#x90E8;&#x7F72;</a></li>
+<li><a href="http://www.javashuo.com/article/p-mqknmune-nv.html" target="_blank">Ubuntu &#x5B89;&#x88C5; Gitbook &#x6B65;&#x9AA4;&#x548C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BE6;&#x89E3; &#x4EE5;&#x53CA; &#x963F;&#x91CC;&#x4E91;&#x57FA;&#x4E8E; Gitbook &#x6211;&#x7684;&#x535A;&#x5BA2;&#x90E8;&#x7F72;</a></li>
+<li><a href="https://blog.csdn.net/m0_47838348/article/details/119873442" target="_blank">&#x300A;&#x4E86;&#x4E0D;&#x8D77;&#x7684;Markdown&#x300B;&#x7B2C;&#x516B;&#x7AE0;</a>&#xFF1A;&#x4ECE;&#x521B;&#x5EFA;&#x5230;&#x53D1;&#x5E03;&#x7684;&#x5B8C;&#x6574;&#x6D41;&#x7A0B;</li>
+</ol>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="install.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: install">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"usage","level":"1.3","depth":1,"previous":{"title":"install","level":"1.2","depth":1,"path":"install.md","ref":"install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","-sharing","-livereload","github","chart","todo","graph","puml","katex","code","ace","mermaid-gb3","flexible-alerts","chapter-fold","anchor-navigation-ex","theme-comscore","splitter","popup","sidebar-style","edit-link","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"title":"gitbook_guide","author":"Mealoore"},"chapter-fold":{},"ace":{},"github":{"url":"https://github.com/Mealoore/gitbook_guide"},"puml":{},"todo":{},"splitter":{},"popup":{},"code":{"copyButtons":true},"graph":{},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"theme-comscore":{},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"}},"edit-link":{"label":"Edit This Page","base":"https://github.com/Mealoore/gitbook_guide"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"c3"}},"theme":"default","author":"Mealoore","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 简明教程","language":"zh-hans","links":{"sidebar":{"Mealoore":"https://github.com/Mealoore"}},"gitbook":"*"},"file":{"path":"usage.md","mtime":"2023-03-14T09:19:41.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-14T09:20:42.726Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
