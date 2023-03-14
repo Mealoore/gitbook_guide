@@ -1,0 +1,14 @@
+.gitbook-link {
+    display: none !important;
+}
+
+.page-inner {
+    max-width: 1000px;
+    padding: 2px 2px 2px 2px;
+}
+
+.book .book-summary .book-logo {
+    text-align: left !important;
+    padding: 0px 0px !important;
+    display: block !important;
+}

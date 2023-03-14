@@ -1,8 +1,24 @@
-<!-- toc -->
-
 # install
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
 
-[Toc]
+<!-- code_chunk_output -->
+
+- [安装 nodejs](#安装-nodejs)
+  - [命令行安装](#命令行安装)
+  - [添加源安装](#添加源安装)
+  - [下载文件安装](#下载文件安装)
+  - [查看版本](#查看版本)
+  - [卸载](#卸载)
+- [包管理](#包管理)
+- [安装 gitbook](#安装-gitbook)
+- [插件](#插件)
+- [问题](#问题)
+- [参考](#参考)
+
+<!-- /code_chunk_output -->
+
+<!-- [Toc] -->
+
 > 说明：测试环境——ubuntu20
 
 ## 安装 nodejs
@@ -15,7 +31,8 @@ node.js中某版本对Gitbook支持好：`v12.16.3`版本支持很好，`v14.3.0
 有人推荐以下指令，但我的不能用，也许你的能用：
 
 ```sh
-sudo apt-get install nodejs-legacy nodejs  # 直接安装在系统环境/usr/bin目录下，之后使用npm -g安装其他插件也会安装到/usr/lib/node_modules(需要使用sudo权限)。
+# 直接安装在系统环境/usr/bin目录下，之后使用npm -g安装其他插件也会安装到/usr/lib/node_modules(需要使用sudo权限)。
+sudo apt-get install nodejs-legacy nodejs  
 ```
 
 提示信息：
@@ -33,7 +50,10 @@ E: Package 'nodejs-legacy' has no installation candidate
 改用以下指令
 
 ```sh
-sudo apt-get install npm nodejs  # 将nodejs路径链接到/usr/local/bin目录下，则每次npm -g安装插件都会安装在nodejs原路径下的node_modules(比如/home/ubuntu/node-v8.1.0-linux-x64/lib/node_modules)，每次代码中引用插件也需要到此目录下去找
+# 将nodejs路径链接到/usr/local/bin目录下，则每次npm -g安装插件都会安装在nodejs原路径下的node_modules
+# (比如/home/ubuntu/node-v8.1.0-linux-x64/lib/node_modules)，
+# 每次代码中引用插件也需要到此目录下去找
+sudo apt-get install npm nodejs  
 
 # 查看版本
 node -v  # 10.19.0
@@ -120,59 +140,77 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 默认带有 5 个插件：
 
 - highlight - 语法高亮插件
-- search - 搜索插件
-- sharing - 分享插件
-- font-settings - 字体设置插件
-- livereload - 热加载插件
+- search - 搜索插件，导航栏查询功能
+- sharing - 分享插件，右上角分享功能
+- font-settings - 字体设置插件（最上方的``"A"``符号）
+- livereload - 热加载插件，为GitBook实时重新加载
 
 **必备插件**：
 
-- [anchor-navigation-ex](https://plugins.gitbook.com/plugin/anchor-navigation-ex)：导航扩展，增加锚点，返回顶部，显示序号
-- [anchor-navigation](https://plugins.gitbook.com/plugin/anchor-navigation)：锚点导航(为什么不能用？)
-- [donate](https://plugins.gitbook.com/plugin/donate)：捐赠打赏按钮插件
-- [splitter](https://plugins.gitbook.com/plugin/splitter)：在左侧目录和右侧内容之间添加一个可以拖拽的栏，用来调整两边的宽度。
-- [tbfed-pagefooter](https://plugins.gitbook.com/plugin/tbfed-pagefooter)：自定义页脚，显示版权和最后修订时间。
-- [ad](https://plugins.gitbook.com/plugin/ad)：在每个页面顶部和底部添加广告或任何自定义内容。
+- [anchor-navigation-ex]( https://github.com/zq99299/gitbook-plugin-anchor-navigation-ex)：导航扩展，增加锚点，返回顶部，显示序号。展示页面大纲的空间，可以按照段落来展示，可以快捷转挑到页面的相应位置。悬浮目录和回到顶部。
+- [anchor-navigation](https://github.com/yaneryou/gitbook-plugin-anchor-navigation)：锚点导航(为什么不能用？)
+- [donate](https://github.com/willin/gitbook-plugin-donate)：捐赠打赏按钮插件
+- [splitter](https://github.com/yoshidax/gitbook-plugin-splitter)：在左侧目录和右侧内容之间添加一个可以拖拽的栏，用来调整两边的宽度。
+- [tbfed-pagefooter](https://github.com/zhj3618/gitbook-plugin-tbfed-pagefooter)：自定义页脚，显示版权和最后修订时间。
+- [ad](https://github.com/zhaoda/gitbook-plugin-ad)：在每个页面顶部和底部添加广告或任何自定义内容。
 
 **常用插件**
 
-- [editlink](https://plugins.gitbook.com/plugin/editlink)：内容顶部显示`编辑本页`链接。
-- [book-summary-scroll-position-saver](https://plugins.gitbook.com/plugin/book-summary-scroll-position-saver)：自动保存左侧目录区域导航条的位置。
-- [prism](https://plugins.gitbook.com/plugin/prism)：基于 [Prism](http://prismjs.com/) 的代码高亮。
-- [atoc](https://plugins.gitbook.com/plugin/atoc)：插入 TOC 目录。
-- [ace](https://plugins.gitbook.com/plugin/ace)：插入代码高亮编辑器。
-- [include-codeblock](https://plugins.gitbook.com/plugin/include-codeblock)：通过引用文件插入代码。
-- [expandable-chapters](https://plugins.gitbook.com/plugin/expandable-chapters)：收起或展开章节目录中的父节点。
-- [anchors](https://plugins.gitbook.com/plugin/anchors)：标题带有 github 样式的锚点。
-- [github](https://plugins.gitbook.com/plugin/github)：在右上角显示 github 仓库的图标链接。
-- [github-buttons](https://plugins.gitbook.com/plugin/github-buttons)：显示 github 仓库的 star 和 fork 按钮。
+- [editlink](https://github.com/zhaoda/gitbook-plugin-editlink)：内容顶部显示`编辑本页`链接。
+- [book-summary-scroll-position-saver](https://github.com/yoshidax/gitbook-plugin-book-summary-scroll-position-saver)：自动保存左侧目录区域导航条的位置。
+- [prism](https://github.com/gaearon/gitbook-plugin-prism)：基于 [Prism](http://prismjs.com/) 的代码高亮。
+- [atoc](https://github.com/willin/gitbook-plugin-atoc)：插入 TOC 目录。
+- [ace](https://github.com/ymcatar/gitbook-plugin-ace)：插入代码高亮编辑器。
+- [include-codeblock](https://github.com/azu/gitbook-plugin-include-codeblock)：通过引用文件插入代码。
+- [expandable-chapters](https://github.com/DomainDrivenArchitecture/gitbook-plugin-expandable-chapters)：收起或展开章节目录中的父节点。
+- [page-treeview](https://www.npmjs.com/package/gitbook-plugin-page-treeview-simple) ：插件是生成页内目录
+- page-treeview-simple：和 `page-treeview` 功能相同，在其基础之上修改了以下内容——去除 `copyRight` 的提示内容与占用的空白高和取消章节的折叠效果，默认展开显示完整章节
+- [simple-page-toc](https://www.npmjs.com/package/gitbook-plugin-simple-page-toc) ：生成本页目录 需要在文章中插入标签，支持1-3级目录 页面顶端生成。另外 GitBook 在处理重复的标题时有些问题，所以尽量不适用重复的标题
+- [page-toc](https://www.npmjs.com/package/gitbook-plugin-page-toc-af)：每个页面上添加了一个目录 (TOC)。您可以设置目录是否默认显示在所有页面上，您可以启用或禁用个别页面上的目录以覆盖默认值。
+- ancre-navigation：右上角悬浮导航和回到顶部按钮
+- intopic-toc：在右侧插入目录，文中不需要写 Toc
+- [anchors](https://github.com/rlmv/gitbook-plugin-anchors)：标题带有 github 样式的锚点。
+- [github](https://github.com/GitbookIO/plugin-github)：在右上角显示 github 仓库的图标链接。
+- [github-buttons](https://github.com/azu/gitbook-plugin-github-buttons)：显示 github 仓库的 star 和 fork 按钮。
+- page-toc-button：悬浮目录
+- page-treeview
+- donate：打赏
+- flexible-alerts：警报
+- klipse：嵌入类似IDE的功能
 
 **可能有用的**
 
-- [redirect](https://plugins.gitbook.com/plugin/redirect)：页面跳转(重定向)。
-- [sectionx](https://plugins.gitbook.com/plugin/sectionx)：分离各个段落，并提供一个展开收起的按钮。
-- [favicon](https://plugins.gitbook.com/plugin/favicon)：为网站添加了favicon和Apple Touch图标。
-- [image-captions](https://plugins.gitbook.com/plugin/image-captions)：抓取内容中图片的 `alt` 或 `title` 属性，在图片下面显示标题。
-- [mermaid](https://plugins.gitbook.com/plugin/mermaid)：使用流程图。
-- [latex-codecogs](https://plugins.gitbook.com/plugin/latex-codecogs)：使用数学方程式。
-- [disqus](https://plugins.gitbook.com/plugin/disqus)：添加 disqus 评论插件。
-- [sitemap](https://plugins.gitbook.com/plugin/sitemap)：生成站点地图。
-- [baidu](https://plugins.gitbook.com/plugin/baidu)：使用百度统计。
-- [ga](https://plugins.gitbook.com/plugin/ga)：添加 Google 统计代码。
-- [duoshuo](https://plugins.gitbook.com/plugin/duoshuo)：使用多说评论。
+- [redirect](https://github.com/ketan/gitbook-plugin-redirect)：页面跳转(重定向)。
+- [sectionx](https://github.com/ymcatar/gitbook-plugin-sectionx)：分离各个段落，并提供一个展开收起的按钮。
+- [favicon](https://github.com/menduo/gitbook-plugin-favicon)：为网站添加了favicon和Apple Touch图标。
+- [image-captions](https://github.com/todvora/gitbook-plugin-image-captions)：抓取内容中图片的 `alt` 或 `title` 属性，在图片下面显示标题。
+- [mermaid](https://github.com/JozoVilcek/gitbook-plugin-mermaid)：使用流程图。
+- [latex-codecogs](https://github.com/GitbookIO/plugin-latex-codecogs)：使用数学方程式。
+- [disqus](https://github.com/GitbookIO/plugin-disqus)：添加 disqus 评论插件。
+- [sitemap](https://github.com/GitbookIO/plugin-sitemap)：生成站点地图。
+- [baidu](https://github.com/poppinlp/gitbook-plugin-baidu)：使用百度统计。
+- [ga](https://github.com/GitbookIO/plugin-ga)：添加 Google 统计代码。
+- [duoshuo](https://github.com/codepiano/gitbook-plugin-duoshuo)：使用多说评论。
+- [prism](https://github.com/gaearon/gitbook-plugin-prism)：基于 Prism 的代码高亮
+- alerts：主要是一些样式的插件，可以根据配置针对不同的内容定义不同的颜色。
+- [disqus](https://github.com/GitbookIO/plugin-disqus)：评论插件，需要注册disqus.com账号，[使用例程](https://blog.csdn.net/weixin_38171180/article/details/100689129;)
 
 **一般用不到的**
 
-- [chart](https://plugins.gitbook.com/plugin/chart)：使用 C3.js 图表。
-- [youtubex](https://plugins.gitbook.com/plugin/youtubex)：插入 YouTube 视频。
-- [fbqx](https://plugins.gitbook.com/plugin/fbqx)：使用填空题。
-- [mcqx](https://plugins.gitbook.com/plugin/mcqx)：使用选择题。
-- [spoiler](https://plugins.gitbook.com/plugin/spoiler)：隐藏答案，当鼠标划过时才显示。
-- [styles-sass](https://plugins.gitbook.com/plugin/styles-sass)：使用 SASS 替换 CSS。
-- [styles-less](https://plugins.gitbook.com/plugin/styles-less)：使用 LESS 替换 CSS。
+- [chart](https://github.com/csbun/gitbook-plugin-chart)：使用 C3.js 图表。
+- [youtubex](https://github.com/ymcatar/gitbook-plugin-youtubex)：插入 YouTube 视频。
+- [fbqx](https://github.com/Erwin-Chan/gitbook-plugin-fbqx)：使用填空题。
+- [mcqx](https://github.com/ymcatar/gitbook-plugin-mcqx)：使用选择题，交互式多选
+- [spoiler](https://github.com/ymcatar/gitbook-plugin-spoiler)：隐藏答案，当鼠标划过时才显示。
+- [styles-sass](https://github.com/GitbookIO/plugin-styles-sass)：使用 SASS 替换 CSS。
+- [styles-less](https://github.com/GitbookIO/plugin-styles-less)：使用 LESS 替换 CSS。
 
-去除默认插件，可以在插件名称前面加 `-`；当遇到「左侧的目录折叠」这种需求的时候，就用到 GitBook 插件了。**官方获取插件地址：** https://plugins.gitbook.com/
-安装插件只须要在书籍目录下增长 book.json 文件，在`book.json`写入相应插件`plugins`和配置`pluginsConfig`后，使用`gitbook install`安装插件。例如增长 折叠目录 的插件，须要在 book.json 内增长下面代码:
+去除默认插件，可以在插件名称前面加 `-`
+
+- 官方获取插件地址： https://plugins.gitbook.com/（现在已经无法访问了）。
+- 插件其他地址：https://www.npmjs.com/search?q=gitbook
+
+安装插件只须在书籍目录下修改 book.json 文件，在`book.json`写入相应插件`plugins`和配置`pluginsConfig`后，使用`gitbook install`安装插件。例如增长折叠目录的插件，须在 book.json 内增加下面代码:
 
 ```json
 {
@@ -191,13 +229,21 @@ npm install gitbook-plugin-plugin_name
 npm install gitbook-plugin-expandable-chapters-small
 ```
 
-安装位置在当前目录下的 node_modules 文件夹中。
+> 注意：安装位置在当前目录下的 node_modules 文件夹中。
 
-常见插件配置：
+**常见插件配置**
 
 ```json
 {
-    // gitbook-plugin-insert-logo 图标	
+    // 如果希望将网页源码暴露出去并接受公众的监督校准的话,使用edit-link插件可以直接链接到源码文件
+    "plugins": ["edit-link"],	
+    "pluginsConfig": {	
+        "edit-link": {	
+          "base": "https://github.com/snowdreams1006/snowdreams1006.github.io/blob/master",	
+          "label": "编辑本页"	
+        }	
+    },
+    // 在左上角插入一个logo图片的插件，就像上面截图中的一样，可以插入自己的logo图片	
     "plugins": [ "insert-logo" ],
     "pluginsConfig": {
         "insert-logo": {
@@ -253,7 +299,7 @@ npm install gitbook-plugin-expandable-chapters-small
     "pluginsConfig" : {
         "favicon": "icon/favicon.ico"
     }
-    // tbfed-pagefooter 页面添加页脚
+    // tbfed-pagefooter 页面添加页脚，在每个文章下面标注版权信息和文章时间
     "plugins": [
        "tbfed-pagefooter"
     ],
@@ -266,13 +312,84 @@ npm install gitbook-plugin-expandable-chapters-small
     },
 	// popup 弹出大图：点击可以在新窗口展示图片
 	"plugins": [ "popup" ],
-	// 
+	// sharing-plus 分享当前页面，gitbook默认只有Facebook、Google+、Twiter、Weibo、Instapaper，插件可以有更多分享方式，也可以关闭指定分享方式。
+	"plugins": ["-sharing", "sharing-plus"],
+    "pluginsConfig": {
+        "sharing": {
+             "douban": true,
+             "facebook": true,
+             "google": true,
+             "pocket": true,
+             "qq": true,
+             "qzone": true,
+             "twitter": true,
+             "weibo": true,
+          "all": [
+               "douban", "facebook", "google", "instapaper", "linkedin","twitter", "weibo", 
+               "messenger","qq", "qzone","viber","whatsapp"
+           ]
+       }
+    },
+	// change_girls 可自动切换的背景
+	"plugins":["change_girls"],
+    "pluginsConfig": {
+        "change_girls" : {
+            "time" : 5,
+            "urls" : [
+                "girlUrl1", "girlUrl2",...
+            ]
+        }
+    },
+    // emphasize强调突出颜色
+    "plugins": ["emphasize"],
+    // This text is {% em %}highlighted !{% endem %}
+    // This text is {% em %}highlighted with **markdown**!{% endem %}
+    // This text is {% em type="green" %}highlighted in green!{% endem %}
+    // This text is {% em type="red" %}highlighted in red!{% endem %}
+    // This text is {% em color="#ff0000" %}highlighted with a custom color!{% endem %}
+        
+    // sidebar-style 导航栏显示作者信息
+    "plugins": ["sidebar-style"],
+    "pluginsConfig": {
+        "sidebar-style": {
+            "title": "前端开发",
+            "author": "付铭"
+        }
+    }，
+    // 只会提取h[1-3]标签作为悬浮导航，只有按照以下顺序嵌套才会被提取：必须要以 h1 开始，直接写 h2 不会被提取
+    // anchor-navigation-ex和别的插件会互相叠加影响，应选择其中一种即可
+    plugins: ["anchor-navigation-ex"],
+    pluginsConfig: [
+        "anchor-navigation-ex": {
+        "tocLevel1Icon": "fa fa-hand-o-right",
+        "tocLevel2Icon": "fa fa-hand-o-right",
+        "tocLevel3Icon": "fa fa-hand-o-right",
+        "multipleH1": false,
+        "multipleH2": false,
+        "multipleH3": false,
+        "multipleH4": false,
+        "showLevelIcon": false,
+        "showLevel": false
+    },
+	// page-toc-button
+	// maxTocDept 标题的最大深度（2 = h1 + h2 + h3）。不支持值> 2。 默认2
+	// minTocSize 显示toc按钮的最小toc条目数。 默认 2
+	"pluginsConfig": {
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+       }
+	}
+    // 嵌入类似IDE的功能
+    "plugins": ["klipse"],
+	// 在 markdown 中插入代码段
+        // eval-python
+        //     print [x + 1 for x in range(10)]
+    
 }
 ```
 
-
-
-
+> 注意：配置文件中不能有注释，也不能有多余的逗号，否则会报错。json在发明之初就是不提倡注释的。
 
 
 
@@ -313,7 +430,11 @@ npm install gitbook-plugin-expandable-chapters-small
 1. [Gitbook部署之nodejs踩坑](https://www.cnblogs.com/hacv/p/14311409.html)
 2. [ElasticSearch 安装时一些错误以及解决方法 ](https://www.cnblogs.com/frank-hui/p/12200284.html)
 3. https://github.com/nodesource/distributions
-3. [关于gitbook的结构及优化配置](https://blog.csdn.net/weixin_44008788/article/details/113920083)
-3. https://www.mapull.com/gitbook/comscore/custom/plugin/common/toc.html
-3. https://www.zhaowenyu.com/gitbook-doc/
-3. [GitBook使用教程](https://www.dandelioncloud.cn/article/details/1575108888532054017)
+4. [关于gitbook的结构及优化配置](https://blog.csdn.net/weixin_44008788/article/details/113920083)
+5. https://www.mapull.com/gitbook/comscore/custom/plugin/common/toc.html
+6. https://www.zhaowenyu.com/gitbook-doc/
+7. [GitBook使用教程](https://www.dandelioncloud.cn/article/details/1575108888532054017)
+8. [gitook 插件 文章目录导航 ](https://blog.51cto.com/ghostwritten/5357717)
+9. [gitbook 插件 文章 TOC 目录](https://blog.csdn.net/xixihahalelehehe/article/details/125117549)
+10. [Gitbook 打造的 Gitbook 说明文档](https://www.mapull.com/gitbook/comscore/)
+10. [官方文档 - 使用GitBook和Typora生成类似官方文档](https://www.cnblogs.com/h-z-y/p/14437348.html)：该博客给出了很多插件的源码地址
