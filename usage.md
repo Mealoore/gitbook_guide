@@ -167,3 +167,9 @@ gitbook uninstall 2.0.1  # 卸载对应的gitbook版本
 2. [Ubuntu安装nodejs +Gitbook安装 +nginx部署](https://blog.csdn.net/weixin_42396197/article/details/124218369)
 2. [Ubuntu 安装 Gitbook 步骤和使用方法详解 以及 阿里云基于 Gitbook 我的博客部署](http://www.javashuo.com/article/p-mqknmune-nv.html)
 2. [《了不起的Markdown》第八章](https://blog.csdn.net/m0_47838348/article/details/119873442)：从创建到发布的完整流程
+2. http://gitbook.zhangjikai.com/
+2. http://shenweiyan.gitee.io/gitbook/
+2. http://caibaojian.com/gitbook/
+2. http://www.zhaowenyu.com/gitbook-doc/
+2. https://www.liqingbo.cn/docs/gitbook/
+2. https://www.mapull.com/gitbook/comscore/

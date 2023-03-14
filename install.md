@@ -167,6 +167,7 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 - page-treeview-simple：和 `page-treeview` 功能相同，在其基础之上修改了以下内容——去除 `copyRight` 的提示内容与占用的空白高和取消章节的折叠效果，默认展开显示完整章节
 - [simple-page-toc](https://www.npmjs.com/package/gitbook-plugin-simple-page-toc) ：生成本页目录 需要在文章中插入标签，支持1-3级目录 页面顶端生成。另外 GitBook 在处理重复的标题时有些问题，所以尽量不适用重复的标题
 - [page-toc](https://www.npmjs.com/package/gitbook-plugin-page-toc-af)：每个页面上添加了一个目录 (TOC)。您可以设置目录是否默认显示在所有页面上，您可以启用或禁用个别页面上的目录以覆盖默认值。
+- summary：目录自动生成
 - ancre-navigation：右上角悬浮导航和回到顶部按钮
 - intopic-toc：在右侧插入目录，文中不需要写 Toc
 - [anchors](https://github.com/rlmv/gitbook-plugin-anchors)：标题带有 github 样式的锚点。
@@ -177,6 +178,7 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 - donate：打赏
 - flexible-alerts：警报
 - klipse：嵌入类似IDE的功能
+- copy-code-button：为代码块添加复制的按钮
 
 **可能有用的**
 
@@ -194,6 +196,7 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 - [prism](https://github.com/gaearon/gitbook-plugin-prism)：基于 Prism 的代码高亮
 - alerts：主要是一些样式的插件，可以根据配置针对不同的内容定义不同的颜色。
 - [disqus](https://github.com/GitbookIO/plugin-disqus)：评论插件，需要注册disqus.com账号，[使用例程](https://blog.csdn.net/weixin_38171180/article/details/100689129;)
+- advanced-emoji：表情支持
 
 **一般用不到的**
 
@@ -388,6 +391,8 @@ npm install gitbook-plugin-expandable-chapters-small
     
 }
 ```
+
+[配置模板](https://github.com/Mealoore/gitbook_guide/template.json)
 
 > 注意：配置文件中不能有注释，也不能有多余的逗号，否则会报错。json在发明之初就是不提倡注释的。
 
