@@ -1,6 +1,84 @@
 {
-    "plugins": ["expandable-chapters-small"],
-    "pluginsConfig": {
-        "expandable-chapters-small":{}
+  "title": "GitBook 简明教程",
+  "language": "zh-hans",
+  "author": "码谱",
+  "links": {
+    "sidebar": {
+      "码谱": "http://www.mapull.com"
     }
+  },
+  "plugins": [
+    "-search",
+    "-lunr",
+    "-sharing",
+    "-livereload",
+    "github",
+    "donate",
+    "chart",
+    "todo",
+    "graph",
+    "puml",
+    "katex",
+    "code",
+    "ace",
+    "sitemap-general",
+    "mermaid-gb3",
+    "flexible-alerts",
+    "chapter-fold",
+    "anchor-navigation-ex",
+    "theme-comscore"
+  ],
+  "pluginsConfig": {
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "showGoTop": true
+    },
+    "sitemap-general": {
+      "prefix": "https://www.mapull.com/gitbook/comscore/"
+    },
+    "my-toolbar": {
+      "buttons": [
+        {
+          "label": "下载PDF",
+          "icon": "fa fa-file-pdf-o",
+          "url": "https://www.mapull.com/gitbook/comscore/book.pdf",
+          "position": "left",
+          "text": "下载PDF",
+          "target": "_blank"
+        }
+      ]
+    },
+    "donate": {
+      "wechat": "https://www.mapull.com/logo/mapull-qr.png",
+      "button": "反馈",
+      "wechatText": "微信扫码"
+    },
+    "versions": {
+      "options": [
+        {
+          "value": "https://www.mapull.com/gitbook/api/",
+          "text": "Theme API"
+        },
+        {
+          "value": "https://www.mapull.com/gitbook/comscore/",
+          "text": "Theme comscore",
+          "selected": true
+        }
+      ]
+    },
+    "github": {
+      "url": "https://github.com/Mealoore/gitbook_guide"
+    },
+    "edit-link": {
+      "base": "https://github.com/Mealoore/gitbook_guide",
+      "label": "Edit This Page"
+    }
+  },
+  "variables": {
+    "mapull": "码谱，让编程更容易。",
+    "ides": [{"name": "Eclipse"}, {"name": "IntelliJ IDEA"}, {"name": "Visual Studio Code"}]
+  },
+  "structure": {
+    "readme": "README.md"
+  }
 }

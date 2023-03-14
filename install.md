@@ -1,12 +1,14 @@
+<!-- toc -->
+
 # install
 
 [Toc]
-
 > 说明：测试环境——ubuntu20
 
 ## 安装 nodejs
 
 node.js中某版本对Gitbook支持好：`v12.16.3`版本支持很好，`v14.3.0`版本不OK
+
 
 ### 命令行安装
 
@@ -181,7 +183,15 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 }
 ```
 
-而后终端执行命令 `gitbook install` 来安装插件便可。
+而后终端执行命令 `gitbook install` 来安装插件便可。如果使用该命令安装较慢，可使用npm安装：
+
+```sh
+npm install gitbook-plugin-plugin_name 
+# 如插件：expandable-chapters-small
+npm install gitbook-plugin-expandable-chapters-small
+```
+
+安装位置在当前目录下的 node_modules 文件夹中。
 
 常见插件配置：
 
@@ -218,6 +228,13 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 	"plugins": ["expandable-chapters-small"],
     "pluginsConfig": {
         "expandable-chapters-small":{}
+    },
+    "plugins": ["atoc", "splitter"],
+    "pluginsConfig": {
+        "atoc": {
+               "addClass": true,
+               "className": "atoc"
+           }
     },
 	// code 复制代码
 	"plugins" : [ "code" ],
@@ -263,7 +280,7 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 
 1. `gitbook init` 报错：`TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffe`
 
-   **解决：**更换 nodejs 较低版本
+   **解决：** 更换 nodejs 较低版本
 
 2. `npm install gitbook-pdf -g` 安装phantomjs出错：
 
@@ -297,3 +314,6 @@ gitbook -V  # 若gitbook没安装，这一步会自动安装
 2. [ElasticSearch 安装时一些错误以及解决方法 ](https://www.cnblogs.com/frank-hui/p/12200284.html)
 3. https://github.com/nodesource/distributions
 3. [关于gitbook的结构及优化配置](https://blog.csdn.net/weixin_44008788/article/details/113920083)
+3. https://www.mapull.com/gitbook/comscore/custom/plugin/common/toc.html
+3. https://www.zhaowenyu.com/gitbook-doc/
+3. [GitBook使用教程](https://www.dandelioncloud.cn/article/details/1575108888532054017)

@@ -133,7 +133,7 @@ gitbook uninstall 2.0.1  # 卸载对应的gitbook版本
        at /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
    ```
 
-   **解决办法：**注释`/usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js` `文件中以下三行——
+   **解决办法：** 注释`/usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js` `文件中以下三行——
 
    ```cpp
    //fs.stat = statFix(fs.stat)
