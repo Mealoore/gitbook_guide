@@ -2,3 +2,6 @@ _book/
 node_modules/
 package-lock.json
 template.json
+tmp.json
+package.json
+markdown.md
