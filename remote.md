@@ -21,7 +21,7 @@
   - [4.5. 添加文件](#45-添加文件)
   - [4.6. 添加更新说明](#46-添加更新说明)
   - [4.7. 推送](#47-推送)
-  - [4.8. 开启pages服务](#48-开启pages服务)
+  - [4.8. 开启pages服务](#h3-id4848-开启pages服务h3)
 - [5. 自动化脚本](#5-自动化脚本)
 - [6. 个人方案-只托管网页](#6-个人方案-只托管网页)
   - [6.1. github上创建仓库](#61-github上创建仓库)
@@ -204,7 +204,7 @@ git commit -m '更新说明'
 git push -u origin pages
 ```
 
-### 4.8. 开启pages服务
+### <span id="48">4.8. 开启pages服务</span>
 
 登陆github网站，仓库设置开启 pages 服务，也可以添加域名.
 
@@ -283,9 +283,9 @@ git push -u origin master
 
 ### 6.3. 开启pages服务
 
-[上面讲过了](https://notes.augustdoit.men/gitbook/deploy.html###%E5%BC%80%E5%90%AFpages%E6%9C%8D%E5%8A%A1)
+[上面讲过了](#48)
 
-### 6.4. 自动化脚本
+### 6.4. 自动化脚本 
 
 ```sh
 cd _book
@@ -294,8 +294,6 @@ git add .
 git commit -am $1
 git push git@github.com:[yourname]/[repository].git master --force
 ```
-
-
 
 ## 参考
 

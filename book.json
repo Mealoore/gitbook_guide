@@ -1,56 +1,108 @@
 {
-  "title": "GitBook 简明教程", 
-  "language": "zh-hans", 
-  "author": "Mealoore", 
+  "root": ".",
+  "title": "GitBook 简明教程",
+  "language": "zh-hans",
+  "author": "Mealoore",
   "links": {
     "sidebar": {
       "Mealoore": "https://github.com/Mealoore"
     }
-  }, 
+  },
   "styles": {
     "website": "styles/website.css"
-  }, 
+  },
   "structure": {
     "readme": "README.md"
   },
   "plugins": [
-    "-search", 
-    "-lunr", 
-    "-sharing", 
-    "-livereload", 
-    "github", 
-    "chart", 
-    "todo", 
-    "graph", 
-    "puml", 
-    "katex", 
-    "code", 
-    "ace", 
-    "mermaid-gb3", 
-    "flexible-alerts", 
-    "chapter-fold", 
-    "anchor-navigation-ex", 
-    "theme-comscore", 
-    "splitter", 
-    "popup", 
-    "sidebar-style", 
-    "edit-link"
-  ], 
+    "theme-default",
+    "-search",
+    "-lunr",
+    "-sharing",
+    "-livereload",
+    "sharing-plus",
+    "github",
+    "chart",
+    "todo",
+    "graph",
+    "puml",
+    "katex",
+    "copy-code-button",
+    "ace",
+    "emphasize",
+    "mermaid-gb3",
+    "flexible-alerts",
+    "expandable-chapters-small",
+    "anchor-navigation-ex",
+    "theme-comscore",
+    "splitter",
+    "popup",
+    "sidebar-style",
+    "edit-link",
+    "bibtex",
+    "tbfed-pagefooter",
+    "terminal"
+  ],
   "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
     "sidebar-style": {
-      "title": "gitbook_guide", 
+      "title": "gitbook_guide",
       "author": "Mealoore"
-    }, 
+    },
     "anchor-navigation-ex": {
-      "showLevel": false, 
+      "showLevel": false,
       "showGoTop": true
-    }, 
+    },
     "github": {
       "url": "https://github.com/Mealoore/gitbook_guide"
-    }, 
+    },
     "edit-link": {
-      "base": "https://github.com/Mealoore/gitbook_guide", 
+      "base": "https://github.com/Mealoore/gitbook_guide",
       "label": "Edit This Page"
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": true,
+      "hatenaBookmark": false,
+      "instapaper": false,
+      "line": true,
+      "linkedin": true,
+      "messenger": false,
+      "pocket": false,
+      "qq": false,
+      "qzone": true,
+      "stumbleupon": false,
+      "twitter": false,
+      "viber": false,
+      "vk": false,
+      "weibo": true,
+      "whatsapp": false,
+      "all": [
+        "facebook",
+        "google",
+        "twitter",
+        "weibo",
+        "instapaper",
+        "linkedin",
+        "pocket",
+        "stumbleupon"
+      ]
+    },
+    "bibtex": {
+      "bibliography": "literature.bib"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright &copy Mealoore 2023",
+      "modify_label": "update：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "terminal": {
+      "copyButtons": false,
+      "fade": false,
+      "style": "ubuntu"
     }
   }
 }

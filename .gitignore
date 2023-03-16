@@ -1,5 +1,5 @@
-_book/
-node_modules/
+_book/*
+node_modules/*
 tmp.json
 book (copy).json
 package-lock.json

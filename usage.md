@@ -68,8 +68,24 @@ gitbook基本结构
    * [相关文章沉淀](artical.md)  
    * [关于 gitbook](gitbook.md)
    ```
+   如上所示，章节的md文件，还可以存放在子文件夹中。另外，GitBook的目录，限定为三级。此外，用户还可以通过使用标题或者水平分割线标识将GitBook目录分为几个不同的部分。
+   ```markdown
+   # Summary
+   ### Part I 
+   * [Introduction](README.md)
+   ### Part II  
+   * [uitest 是什么](users/index.md)  
+       * [如何使用 uitest](users/use.md)  
+       * [如何编写自定义的测试用例](users/case.md)  
+       * [browserjs API 文档](users/api.md)
+   ----
+   * [uitest 开发者文档](devs/index.md)  
+       * [browserjs 开发者文档](devs/browserjs.md)  
+       * [utci 文档](devs/utci.md)  
+       * [utserver & utclient 文档](devs/utserver.md)
+   ```
 
-3. Glossary.md对于电子书内容中需要解释的词汇可在此文件中定义。词汇表会被放在电子书末尾。  
+3. Glossary.md对于电子书内容中需要解释的词汇可在此文件中定义。词汇表会被放在电子书末尾， 如果在其他页面中出现了该文件中的词汇，鼠标放到词汇上会给出词汇示意。
 
    ```markdown
    # 电子书  
@@ -97,7 +113,7 @@ gitbook基本结构
 | 变量  | 描述 |
 | ---- | ---- |
 |root           | 包含所有图书文件的根文件夹的路径，除了 book.json |
-| structure     | 指定自述文件，摘要，词汇表等的路径  |
+| structure     | 指定自述文件，摘要，词汇表等的路径，即Readme、Summary、Glossary 和 Languages 对应的文件名 |
 | title         | 您的书名，默认值是从 README 中提取出来的。在 GitBook.com 上，这个字段是预填的。|
 | description   | 您的书籍的描述，默认值是从 README 中提取出来的。在 GitBook.com 上，这个字段是预填的。|
 | author        | 作者名。在GitBook.com上，这个字段是预填的。|
@@ -110,6 +126,39 @@ gitbook基本结构
 | pluginsConfig | 插件的配置   |
 | styles        | 自定义页面样式， 默认情况下各generator对应的css文件`"styles": { "website": "styles/website.css", }`  |
 
+模板
+
+```json
+{
+    "title" : "Gitbook Use",
+    "author" : "Mealoore",
+    "description" : "记录Gitbook的配置和一些插件的使用",
+    "language" : "zh-hans",
+    "gitbook" : "3.2.2",
+    "root": ".",
+    "links" : {
+        "sidebar" : {
+            "Home" : "http://zhangjikai.com"
+        }
+    },
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "plugins": [ "disqus" ],
+    "pluginsConfig": {
+        "fontsettings": {
+            "theme": "sepia",
+            "family": "serif",
+            "size":  1
+        }
+    }
+}
+```
+
 
 
 ## 控制命令
@@ -118,6 +167,9 @@ gitbook基本结构
 
 ```sh
 gitbook build [书籍路径] [输出路径]  # 生成html静态网页文件：_book，其中 index.html 为入口文件
+gitbook build --gitbook=2.0.1     # 生成时指定gitbook的版本, 本地没有会先下载
+gitbook build --log=debug         # 指定log的级别
+gitbook builid --debug            # 输出错误信息
 gitbook serve [--port 端口号] # 在网页中查看，浏览器中输入 *http://localhost:4000* 即可预览电子书内容
 gitbook pdf ./ ./mybook.pdf    # 生成 pdf/epub/mobi 格式的电子书
 gitbook epub ./ ./mybook.epub  # 生成epub格式
@@ -127,11 +179,11 @@ gitbook mobi ./ ./mybook.mobi  # 生成 mobi 格式
 其他命令：
 
 ```sh
-gitbook help            # 列出gitbook所有的命令
-gitbook --help          # 输出gitbook-cli的帮助信息
-gitbook ls              # 列出本地所有的gitbook版本
-gitbook ls-remote       # 列出远程可用的gitbook版本
-gitbook fetch 标签/版本号 # 安装对应的gitbook版本
+gitbook help             # 列出gitbook所有的命令
+gitbook --help           # 输出gitbook-cli的帮助信息
+gitbook ls               # 列出本地所有的gitbook版本
+gitbook ls-remote        # 列出远程可用的gitbook版本
+gitbook fetch 标签/版本号  # 安装对应的gitbook版本
 gitbook update           # 更新到gitbook的最新版本
 gitbook uninstall 2.0.1  # 卸载对应的gitbook版本
 ```
@@ -143,8 +195,9 @@ gitbook uninstall 2.0.1  # 卸载对应的gitbook版本
 1. `gitbook build`报错：
 
    ```sh
+   **[terminal]
    TypeError: cb.apply is not a function
-       at /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18
+       **[error at /usr/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287:18]
    ```
 
    **解决办法：** 
@@ -162,14 +215,14 @@ gitbook uninstall 2.0.1  # 卸载对应的gitbook版本
 
 1. [gitbook安装过程中出现TypeError: cb.apply is not a function](https://blog.csdn.net/swy_swy_swy/article/details/118542847?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-118542847-blog-110948703.pc_relevant_3mothn_strategy_and_data_recovery&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-118542847-blog-110948703.pc_relevant_3mothn_strategy_and_data_recovery&utm_relevant_index=1)
 2. [gitbook电子书制作步骤（linux环境下）](http://www.taodudu.cc/news/show-4899270.html)
-2. [Ubuntu 安装 Gitbook 步骤和使用方法详解 以及 阿里云基于 Gitbook 我的博客部署](http://www.javashuo.com/article/p-mqknmune-nv.html)
-2. [Gitbook 简介 使用总结 MD](https://www.bbsmax.com/A/A2dm2xY7ze/)
-2. [Ubuntu安装nodejs +Gitbook安装 +nginx部署](https://blog.csdn.net/weixin_42396197/article/details/124218369)
-2. [Ubuntu 安装 Gitbook 步骤和使用方法详解 以及 阿里云基于 Gitbook 我的博客部署](http://www.javashuo.com/article/p-mqknmune-nv.html)
-2. [《了不起的Markdown》第八章](https://blog.csdn.net/m0_47838348/article/details/119873442)：从创建到发布的完整流程
-2. http://gitbook.zhangjikai.com/
-2. http://shenweiyan.gitee.io/gitbook/
-2. http://caibaojian.com/gitbook/
-2. http://www.zhaowenyu.com/gitbook-doc/
-2. https://www.liqingbo.cn/docs/gitbook/
+3. [Gitbook 简介 使用总结 MD](https://www.bbsmax.com/A/A2dm2xY7ze/)
+4. [Ubuntu安装nodejs +Gitbook安装 +nginx部署](https://blog.csdn.net/weixin_42396197/article/details/124218369)
+5. [Ubuntu 安装 Gitbook 步骤和使用方法详解 以及 阿里云基于 Gitbook 我的博客部署](http://www.javashuo.com/article/p-mqknmune-nv.html)
+6. [《了不起的Markdown》第八章](https://blog.csdn.net/m0_47838348/article/details/119873442)：从创建到发布的完整流程
+7. [GitBook使用教程](https://www.dandelioncloud.cn/article/details/1575108888532054017)
+8. http://gitbook.zhangjikai.com/
+9. http://shenweiyan.gitee.io/gitbook/
+10. http://caibaojian.com/gitbook/
+11. http://www.zhaowenyu.com/gitbook-doc/
+12. https://www.liqingbo.cn/docs/gitbook/
 2. https://www.mapull.com/gitbook/comscore/

@@ -1,0 +1,58 @@
+{
+  "name": "gitbook_guide",
+  "version": "1.0.0",
+  "description": "* [Introduction](README.md) * [install](install.md) * [usage](usage.md) * [remote](remote.md) * [plugins](plugins.md) * [theme](theme.md)",
+  "main": "index.js",
+  "dependencies": {
+    "citation-js": "^0.6.7",
+    "gitbook-plugin-ace": "^0.3.2",
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-bibtex": "^0.0.3",
+    "gitbook-plugin-bibtex-citation": "^1.1.1",
+    "gitbook-plugin-bibtex-citations-and-references": "^0.10.4",
+    "gitbook-plugin-bibtex-indexed-cite": "^1.2.0",
+    "gitbook-plugin-chapter-fold": "^0.0.4",
+    "gitbook-plugin-chart": "^0.2.2",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-copy-code-button": "0.0.2",
+    "gitbook-plugin-donate": "^1.0.2",
+    "gitbook-plugin-edit-link": "^2.0.2",
+    "gitbook-plugin-editlink": "^1.0.2",
+    "gitbook-plugin-emphasize": "^1.1.0",
+    "gitbook-plugin-expandable-chapters-small": "^0.1.7",
+    "gitbook-plugin-flexible-alerts": "^1.0.4",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-graph": "^0.1.0",
+    "gitbook-plugin-include-csv": "^1.0.0",
+    "gitbook-plugin-intopic-toc": "^1.1.1",
+    "gitbook-plugin-katex": "^1.1.4",
+    "gitbook-plugin-katex-ng": "^2.0.0",
+    "gitbook-plugin-mermaid-gb3": "^2.1.0",
+    "gitbook-plugin-page-toc": "^1.1.1",
+    "gitbook-plugin-popup": "^0.0.1",
+    "gitbook-plugin-puml": "^1.0.1",
+    "gitbook-plugin-search-plus": "^1.0.4-alpha-3",
+    "gitbook-plugin-sharing-plus": "^0.0.2",
+    "gitbook-plugin-sidebar-style": "^1.0.2",
+    "gitbook-plugin-sitemap-general": "^0.1.1",
+    "gitbook-plugin-splitter": "^0.0.8",
+    "gitbook-plugin-tbfed-pagefooter": "^0.0.1",
+    "gitbook-plugin-terminal": "^0.3.2",
+    "gitbook-plugin-theme-comscore": "^0.0.3",
+    "gitbook-plugin-todo": "^0.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Mealoore/gitbook_guide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mealoore/gitbook_guide/issues"
+  },
+  "homepage": "https://github.com/Mealoore/gitbook_guide#readme"
+}
